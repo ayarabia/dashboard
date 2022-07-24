@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './editorgmodal.css'
-import axios from './../../axios/axios'
-
+import axios from '../../axios/baseInstanse'
+import Service from "../../axios/services";
 
 const EditOrgModal = ({ getOrganisationsData, updateData,deleteId }) => {
     const [addDataState, setAddDataState] = useState({});
@@ -20,7 +20,8 @@ const EditOrgModal = ({ getOrganisationsData, updateData,deleteId }) => {
     const formSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        axios.put(`/api/organizations/${deleteId}`, addDataState)
+    //    axios.put(`/api/organizations/${deleteId}`, addDataState)
+       Service.update(deleteId, addDataState)
             .then(() => {
                     setLoading(false);
                     handleCloseModal();

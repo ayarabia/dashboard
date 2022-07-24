@@ -1,4 +1,4 @@
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
 import React, { useEffect, useState } from 'react'
 import AddParticipatnModal from '../../Modals/add participant modal/AddParticipatnModal'
 import AddTeacherModal from '../../Modals/add teacher modal/AddTeacherModal'
@@ -8,17 +8,27 @@ import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import './schools.css'
 import AddSchoolModal from '../../Modals/add school modal/AddSchoolModal'
 import UpdateSchoolModal from '../../Modals/update school modal/UpdateSchoolModal'
-
+import Service from "../../axios/services";
 const Schools = () => {
     const [deleteId, setdeleteId] = useState(0);
     const [updateData, setupdateData] = useState({});
     const [schoolsData, setSchoolsData] = useState([]);
-
-    const getSchoolsData = async () => {
-        let { data } = await axios.get("/api/schools");
-        setSchoolsData(data)
-    }
-
+ // const getSchoolsData = async () => {
+    //     let { data } = await axios.get("/api/schools");
+    //     setSchoolsData(data)
+    // }
+    const getSchoolsData= () => {
+        Service.getSchoolsData()
+          .then((response) => {
+            let data =response.data
+            setSchoolsData(data)
+            //  console.log(response.data);
+             console.log(schoolsData);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      };
     useEffect(() => {
         getSchoolsData();
 

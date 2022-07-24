@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
 import './addmodal.css'
 
 

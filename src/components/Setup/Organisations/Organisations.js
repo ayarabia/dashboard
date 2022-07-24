@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import AddOrgModal from '../../Modals/add org modal/AddOrgModal'
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
+import Service from "../../axios/services";
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditOrgModal from '../../Modals/edit org modal/EditOrgModal'
 import './organisation.css'
@@ -13,11 +14,21 @@ const Organisations = () => {
     const [updateData, setupdateData] = useState({});
     const [organisationsData, setorganisationsData] = useState([]);
 
-    const getOrganisationsData = async () => {
-        let { data } = await axios.get("/api/organizations");
-        setorganisationsData(data)
-    }
-
+    // const getOrganisationsData = async () => {
+    //     let { data } = await axios.get("/api/organizations");
+    //     setorganisationsData(data)
+    // }
+    const getOrganisationsData= () => {
+        Service.getOrganisationsData()
+          .then((response) => {
+            let data=response.data
+            setorganisationsData(data)
+             console.log(response.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      };
     useEffect(() => {
         getOrganisationsData();
 

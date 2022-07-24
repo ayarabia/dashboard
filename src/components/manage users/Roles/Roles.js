@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
 import './roles.css'
 
 const Roles = () => {

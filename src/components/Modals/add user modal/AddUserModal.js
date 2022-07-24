@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import * as yup from 'yup';
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
 import './addusermodal.css'
 
 const AddUserModal = ({ getUsersData }) => {

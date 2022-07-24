@@ -3,7 +3,7 @@ import './addorgmodal.css'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import * as yup from 'yup';
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
 
 const AddOrgModal = ({ getOrganisationsData }) => {
 

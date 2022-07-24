@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './deletemodal.css'
-import axios from './../../axios/axios'
+import axios from '../../axios/baseInstanse'
 
 
 const DeleteModal = ({deleteData,id,fetchData}) => {
