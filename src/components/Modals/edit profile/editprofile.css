@@ -1,0 +1,81 @@
+#editProfileModal .modal-dialog {
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+#editProfileModal .modal-content {
+
+    width: 60% !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#editProfileModal .modal-header {
+    position: relative;
+    border-bottom: 0;
+}
+
+#editProfileModal .modal-header-icon i::after {
+    display: none;
+}
+
+#editProfileModal .modal-body p {
+    font-size: 20px;
+}
+
+#editProfileModal .modal-body p:first-of-type {
+    font-weight: 600;
+}
+
+#editProfileModal .modal-footer {
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+
+#editProfileModal .btn-confirm {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#editProfileModal textarea {
+    
+    margin-top: 7px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#editProfileModal .btn-close {
+    position: absolute;
+
+    right: 0;
+    top: 20px;
+
+}
+
+#editProfileModal .row50 {
+    width: 120%;
+}
+
+#editProfileModal .image-preview {
+    width: 100%;
+    background-color: #F2F2F2;
+    height: 150px;
+}
+
+#editProfileModal .image-preview>div {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #969994;
+    transform: translate(-50%, -50%);
+}
+.editprofileimage{
+    border-radius: 50%;
+    width: 140px;
+}

@@ -1,0 +1,97 @@
+.sidebar{
+    font-family: 'Nunito', sans-serif;
+}
+.sidebar a {
+    text-decoration: none;
+    color: var(--main-color-2);
+}
+
+.sidebar .accordion-item {
+    border: none;
+    border-radius: 0;
+}
+
+.sidebar .accordion-item:last-of-type .accordion-button.collapsed,
+.sidebar .accordion-item:first-of-type .accordion-button {
+    border-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.sidebar .accordion-button:not(.collapsed),
+.sidebar .accordion-collapse {
+    background-color: var(--main-color);
+    color: #fff;
+    box-shadow: none;
+
+}
+
+.sidebar .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ffffff%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+}
+.sidebar .accordion-button{
+    
+    outline: none;
+    border-top-right-radius:10px !important;
+    border-top-left-radius:10px !important;
+}
+.sidebar .accordion-button:focus{
+    box-shadow: none;
+}
+.sidebar .toggle-side {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+.sidebar .toggle-side i{
+    background-color: #7575AB;
+    border-radius: 50%;
+    color: #fff;
+    width: 30px;
+    line-height: 10px;
+    padding: 10px;
+    height: 30px;
+    cursor: pointer;
+}
+.sidebar .hide-side{
+    font-size: 0 ;
+}
+.sidebar  span{
+    transition: all .5s;
+}
+.sidebar .accordion-button::after{
+    transition: all .5s;
+}
+.sidebar .hide-side span{
+    font-size: 0 ;
+    transition: all .5s;
+    margin-right: 0 !important;
+    margin: 0 !important;
+}
+.sidebar .accordion-body {
+    padding-left: 60px !important;
+    list-style: disc !important;
+}
+.sidebar .hide-side  .accordion-body {
+    padding: 0 !important;
+    list-style: disc !important;
+}
+.sidebar .hide-side  .accordion-button {
+    border-radius: 0 !important;
+}
+.sidebar .hide-side .accordion-button::after{
+    width: 0;
+    transition: all .5s;
+}
+.sidebar .accordion-body li{
+    transition: all .5s;
+}
+.sidebar .accordion-body li a{
+    color: #fff;
+}
+
+.sidebar .accordion-header .collapsed i{
+    color: var(--main-color-3);
+}

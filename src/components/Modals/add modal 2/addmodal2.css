@@ -1,0 +1,53 @@
+#addModal2 .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+#addModal2 form .item{
+   width: auto
+    
+}
+#addModal2 .modal-content {
+    
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#addModal2 .modal-header{
+    position: relative;
+    border-bottom: 0;
+}
+
+#addModal2 .modal-header-icon i::after{
+    display: none;
+}
+#addModal2 .modal-body p{
+    font-size: 20px;
+}
+#addModal2 .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#addModal2 .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#addModal2 .btn-confirm{
+    background-color: var(--main-color);
+    color: #fff;
+}
+#addModal2 textarea{
+    width: 80%;
+    margin-top: 7px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#addModal2 .btn-close{
+    position: absolute;
+    
+    right: 0;
+    top: 20px;
+
+}

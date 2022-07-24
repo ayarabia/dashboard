@@ -1,0 +1,46 @@
+#addTeacherModal .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+#addTeacherModal form .item{
+   width: 45%
+    
+}
+#addTeacherModal .modal-content {
+    
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#addTeacherModal .modal-header{
+    position: relative;
+    border-bottom: 0;
+}
+
+#addTeacherModal .modal-header-icon i::after{
+    display: none;
+}
+#addTeacherModal .modal-body p{
+    font-size: 20px;
+}
+#addTeacherModal .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#addTeacherModal .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#addTeacherModal .btn-confirm{
+    background-color: var(--main-color);
+    color: #fff;
+}
+#addTeacherModal .btn-close{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+#addTeacherModal .row50{
+    width: 120%;
+}

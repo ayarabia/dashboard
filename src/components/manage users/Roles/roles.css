@@ -1,0 +1,16 @@
+.roles__icons i{
+    cursor: pointer;
+    position: relative;
+    transition: all .5s;
+}
+.roles__icons i:first-of-type:hover::after{
+    position: absolute;
+    content: "delete";
+    bottom: -18px;
+    left: 0;
+    font-size: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 88;
+}

@@ -1,0 +1,42 @@
+.profile .profile__cover {
+    width: 100%;
+    height: 40vh;
+    background-image: url(../../../assets/images/mountains.jpg);
+    background-size: cover;
+}
+.profile{
+    font-family: 'Nunito', sans-serif;
+}
+.profile .profile_main {
+    background-color: var(--back-color);
+}
+
+.profile .profile__img__item {
+    position: relative;
+    top: -100px;
+}
+
+.profile .profile__img {
+    width: 200px;
+    border-radius: 50%;
+
+}
+.profile__user__info li{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.profile__user__info i{
+    color: var(--main-color-3);
+    font-size: 20px;
+}
+.profile h3{
+    
+    color: #525A65;
+}
+
+.porfile__desc {
+    color: #707070;
+}
+.profile .delete-btn{
+    width: fit-content;
+}

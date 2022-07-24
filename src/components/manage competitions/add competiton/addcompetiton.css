@@ -1,0 +1,23 @@
+.add-comp .accordion-button:not(.collapsed){
+    background-color: #A9ABD3;
+}
+.add-comp .accordion-button.collapsed{
+    color: var(--main-color) !important;
+}
+.add-comp .accordion-button {
+    color: #fff !important;
+    font-size: 1.2rem !important;
+}
+.add-comp .accordion-item{
+    border: 1px solid #707070;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    border-top: 0 !important;
+}
+.theme-bg{
+    background: #A9ABD3 !important;
+}
+.side-space{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}

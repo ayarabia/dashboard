@@ -1,0 +1,62 @@
+#addDomainModal .modal-dialog {
+    height: 100vh;
+    margin: 0;
+}
+
+#addDomainModal .modal-content {
+
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#addDomainModal .modal-header {
+    position: relative;
+    border-bottom: 0;
+}
+
+#addDomainModal .modal-header-icon i::after {
+    display: none;
+}
+
+#addDomainModal .modal-body p {
+    font-size: 20px;
+}
+
+#addDomainModal .modal-body p:first-of-type {
+    font-weight: 600;
+}
+
+#addDomainModal .modal-footer {
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+
+#addDomainModal .btn-confirm {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#addDomainModal .btn-close {
+    position: absolute;
+
+    right: 0;
+    top: 20px;
+    color: #525A65 !important;
+    font-weight: bold;
+
+}
+#addDomainModal .btn-close::before{
+    content: "" !important;
+}
+
+.add-topic-btn{
+    background-color: #B5C3FC !important;
+}
+#DomainName{
+    background-color: #F2F2F2 !important;
+  padding: 10px  !important;
+  border: none !important;
+}

@@ -1,0 +1,48 @@
+#updateUserModal .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+#updateUserModal .modal-content {
+
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#updateUserModal .modal-header{
+    position: relative;
+    border-bottom: 0;
+}
+#updateUserModal .modal-header-icon i::after{
+    display: none;
+}
+#updateUserModal .modal-body p{
+    font-size: 20px;
+}
+#updateUserModal .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#updateUserModal .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#updateUserModal .btn-confirm{
+    background-color: var(--main-color);
+    color: #fff;
+}
+#updateUserModal textarea{
+    width: 80%;
+    margin-top: 7px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#updateUserModal .btn-close{
+    position: absolute;
+    
+    right: 0;
+    top: 20px;
+
+}

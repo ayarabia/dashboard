@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.bg-main-content {
+  background-color: var(--main-color-2);
+}
+
+.cursr {
+  cursor: pointer;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.bg-sec {
+  background-color: var(--sec-color);
+}
+
+
+.bg-special {
+  background-color: #a5a8cc;
+}
+
+.text-grey {
+  color: #b9b9b9;
+}
+
+.add-btn {
+  background-color: #B5C3FC;
+}
+
+.delete-btn {
+  background-color: #F3797E;
+}
+
+.approve-btn {
+  background-color: #A9ABD3 !important;
+
+}
+
+.dublicate-btn{
+  background-color: var(--main-color);
+}
+.btn-cancel {
+  color: #fff !important;
+  background-color: #848484 !important;
+}
+
+.add-btn,.dublicate-btn,
+.approve-btn,
+.delete-btn,
+.btn-confirm,
+.btn-cancel {
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 5px !important;
+  height: fit-content !important;
+}
+
+.input-transparent {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.border-b-main {
+  border-bottom: 2px solid var(--main-color);
+}
+
+thead {
+  border-radius: 50px;
+  color: #fff;
+}
+
+table {
+  white-space: nowrap;
+  font-family: 'Nunito', sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+tbody {
+  background-color: #F8F8FD;
+}
+
+td {
+  padding: 10px 20px;
+}
+
+.option-dropdown {
+  background-color: #A9ABD3 !important;
+  color: #fff !important;
+}
+
+.my-big {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.options {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+}
+
+.overflow-hidden h2 {
+  font-weight: bold;
+  margin-bottom: 16px !important;
+}
+
+.active-status{
+  color: #6FC9B6;
+}
+.pending-status{
+  color: #707070;
+}
+.locked-status{
+  color: #D96474;
+}
+.btn-submit {
+  color: #fff !important;
+  background-color: var(--main-color) !important;
+}
+
+form label {
+  font-size: 20px;
+}
+
+form input[type=text],
+form input[type=password],
+form input[type=email],
+form input[type=number],
+form select {
+  background-color: #F2F2F2 !important;
+  padding: 10px !important;
+  border: none !important;
+}
+
+.modal-content {
+  border-radius: 10px !important;
+}
+
+.react-tabs__tab-list {
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+.form-check-input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23706FA7%27/%3e%3c/svg%3e") !important;
+}
+.form-check-input[type=radio]:checked  {
+  background-color: #fff;
+  border-color: #706FA7;
+}
+.form-check-input[type=checkbox]:checked{
+  background-color: #706FA7 !important;
+}
+
+/* switch input */
+/* .form-switch .form-check-input{
+  width: 4em !important;
+  border-radius: 0 !important;
+  height: 2em !important;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect width='2em' style='fill:rgb(243, 121, 126);stroke-width:3;stroke:rgb(0,0,0)' height='50' /></svg>") !important;
+}
+.form-switch .form-check-input:checked{
+  width: 4em !important;
+  border-radius: 0 !important;
+  height: 2em !important;
+ 
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect width='2em' style='fill:rgb(243, 121, 126);stroke-width:3;stroke:rgb(0,0,0)' height='50' /></svg>") !important;
+} */
+/* switch input */
+
+
+.toast{
+  display: block !important;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999999;
+}
+
+
+
+
+
+
+
+
+/************************/

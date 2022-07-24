@@ -1,0 +1,39 @@
+.status-btn {
+    padding: 7px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.approved {
+    background-color: var(--main-color-2);
+    color: #8E7DD0;
+}
+
+.pending {
+    color: #9C9FAD;
+    background-color: #F6F8FC;
+}
+
+.rejected {
+    background-color: #F3A867;
+    color: #FDF6E8;
+}
+
+.active-btn,
+.enabled-btn {
+    background-color: #CEF0E6;
+    color: #6FC9B6;
+}
+
+.computed {
+    background-color: #E8F7FD;
+    color: #67A8F3;
+}
+
+.disabled,
+.absent,
+.closed {
+    background-color: #FEE6EB;
+    color: #D96474;
+}

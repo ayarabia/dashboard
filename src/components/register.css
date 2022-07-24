@@ -1,0 +1,13 @@
+.register h1 span{
+    position: relative;
+    display: inline-block;
+}
+.register h1 span::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--main-color);
+}

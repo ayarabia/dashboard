@@ -1,0 +1,65 @@
+#addUserModal .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+
+#addUserModal .modal-content {
+    
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#addUserModal .modal-header{
+    position: relative;
+    border-bottom: 0;
+}
+
+#addUserModal .modal-header-icon i::after{
+    display: none;
+}
+#addUserModal .modal-body p{
+    font-size: 20px;
+}
+#addUserModal .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#addUserModal .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#addUserModal .btn-confirm{
+    background-color: var(--main-color);
+    color: #fff;
+}
+#addUserModal textarea{
+    width: 80%;
+    margin-top: 7px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#addUserModal .btn-close{
+    position: absolute;
+    
+    right: 0;
+    top: 20px;
+
+}
+#addUserModal .row50{
+    width: 120%;
+}
+#addUserModal .image-preview{
+    width: 100%;
+    background-color: #F2F2F2;
+    height: 150px;
+}
+#addUserModal .image-preview>div{
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #969994;
+    transform: translate(-50%,-50%);
+}

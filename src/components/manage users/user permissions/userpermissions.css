@@ -1,0 +1,18 @@
+.user-permissions .item p{
+    color: var(--main-color-3);
+}
+.user-permissions .item p i{
+    color: var( --sec-color-3);
+    margin-right: 15px;
+}
+.user-permissions  label{
+    cursor: pointer;
+}
+.user-permissions .form-switch label {
+    font-size: 20px;
+
+    
+}
+.user-permissions .row{
+    --bs-gutter-x: 11.5rem;
+}

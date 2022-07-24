@@ -1,0 +1,67 @@
+#addOrgParticipant .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+#addOrgParticipant form .item{
+   margin-bottom: 20px;
+}
+#addOrgParticipant .modal-content {
+    
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#addOrgParticipant .modal-header{
+    position: relative;
+    border-bottom: 0;
+}
+
+#addOrgParticipant .modal-header-icon i::after{
+    display: none;
+}
+#addOrgParticipant .modal-body p{
+    font-size: 20px;
+}
+#addOrgParticipant .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#addOrgParticipant .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#addOrgParticipant .btn-confirm{
+    background-color: var(--main-color);
+    color: #fff;
+}
+#addOrgParticipant textarea{
+    width: 80%;
+    margin-top: 7px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+#addOrgParticipant .btn-close{
+    position: absolute;
+    
+    right: 0;
+    top: 20px;
+
+}
+#addOrgParticipant .row50{
+    width: 120%;
+}
+#addOrgParticipant .image-preview{
+    width: 100%;
+    background-color: #F2F2F2;
+    height: 150px;
+}
+#addOrgParticipant .image-preview>div{
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: #969994;
+    transform: translate(-50%,-50%);
+}

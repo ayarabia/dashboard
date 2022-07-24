@@ -1,0 +1,50 @@
+#editDiffModal .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+
+#editDiffModal .modal-content {
+    
+    width: 60%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#editDiffModal .modal-header{
+    position: relative;
+    border-bottom: 0;
+}
+
+#editDiffModal .modal-header-icon i::after{
+    display: none;
+}
+#editDiffModal .modal-body p{
+    font-size: 20px;
+}
+#editDiffModal .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#editDiffModal .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#editDiffModal .btn-confirm{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+#editDiffModal .btn-close{
+    position: absolute;
+    
+    right: 0;
+    top: 20px;
+
+}
+
+
+#editDiffModal input{
+    width: auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}

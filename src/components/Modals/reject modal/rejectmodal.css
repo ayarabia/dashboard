@@ -1,0 +1,60 @@
+#rejectModal .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+#rejectModal .modal-header{
+    border: 0;
+    border-top: 20px solid #F53748;
+    padding: 0 !important;
+    position: relative;
+    margin-bottom: 60px;
+    
+}
+#rejectModal .modal-content {
+    
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#rejectModal .modal-header-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 10px));
+    
+}
+#rejectModal .modal-header-icon i{
+    border-radius: 50%;
+    background-color: #F53748;
+    height: 120px;
+    width: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+#rejectModal .modal-header-icon i::after{
+    display: none;
+}
+#rejectModal .modal-body p{
+    font-size: 20px;
+}
+#rejectModal .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#rejectModal .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#rejectModal .btn-confirm{
+    background-color: #F53748;
+    color: #fff;
+}
+#rejectModal textarea{
+    width: 80%;
+    margin-top: 7px;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}

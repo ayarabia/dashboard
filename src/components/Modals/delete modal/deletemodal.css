@@ -1,0 +1,52 @@
+#deleteModal .modal-dialog{
+    height: 100vh;
+    margin: 0;
+}
+#deleteModal .modal-header{
+    border: 0;
+    border-top: 20px solid #F53748;
+    padding: 0 !important;
+    position: relative;
+    margin-bottom: 60px;
+    
+}
+#deleteModal .modal-content {
+    
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+#deleteModal .modal-header-icon{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 10px));
+    
+}
+#deleteModal .modal-header-icon i{
+    border-radius: 50%;
+    background-color: #F53748;
+    height: 120px;
+    width: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+#deleteModal .modal-header-icon i::after{
+    display: none;
+}
+#deleteModal .modal-body p{
+    font-size: 20px;
+}
+#deleteModal .modal-body p:first-of-type{
+    font-weight: 600;
+}
+#deleteModal .modal-footer{
+    border-top: 0;
+    background-color: #EFEEEF;
+}
+#deleteModal .btn-confirm{
+    background-color: #F53748;
+    color: #fff;
+}
