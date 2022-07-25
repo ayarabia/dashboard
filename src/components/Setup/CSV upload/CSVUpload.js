@@ -14,9 +14,9 @@ const CSVUpload = () => {
                         </div>
                         <div className='row'>
                             <h5 className="bold" >Upload Type:</h5>
-                            <div className='col-12' id='btn-holder'>
+                            <div className='col-12 ' id='btn-holder'>
                                 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked/>
-                                <label class="btn-nobg btn-outline-secondary no-red left-option btn-equal-size" for="option1">Schools</label>
+                                <label class="btn-nobg  no-red left-option btn-equal-size  typeSchool" for="option1">Schools</label>
                                 <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off"/>
                                 <label class="btn-nobg btn-outline-secondary no-red right-option btn-equal-size" for="option2">Participants</label>
                             </div>

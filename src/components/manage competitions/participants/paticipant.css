@@ -1,3 +1,6 @@
+.participants .status .total-item {
+    color: var(--sec-color-2);
+}
 .stats-item{
     display: flex;
     flex-direction: column;
@@ -73,5 +76,8 @@
     border-radius: 5px;
     z-index: 88;
 }
-
+.participants table .index{
+    color:rgb(185, 184, 184);
+  
+}
 
