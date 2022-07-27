@@ -1,27 +1,10 @@
-import React ,{useState,useEffect} from "react";
-import Card from "../../card/card";
-import SessionData from "../../../core/data/Sessions";
-import Service from "../../axios/services";
-
-const CompetitionSessions = () => {
-  const [session,setSession]=useState([])
-const getTasks = () => {
-  Service.getTasks()
-    .then((response) => {
-      let data=response.data
-   
-      setSession(data)
-      console.log(data);
-    })
-    .catch((e) => {
-      console.log(e);
-    });
-};
-useEffect(() => {
-  getTasks();
-
-}, [])
-  const { columns, rows } = SessionData;
+import React ,{useState} from "react";
+import Card from "../card/card";
+import FilterModal from '../Modals/filter modal/FilterModal'
+import ViewOptionModal from '../Modals/vire options modal/ViewOptionModal'
+import IndvdualSessionData from "../../core/data/Session#1";
+const IndvdualSession= () => {
+  const { columns, rows } = IndvdualSessionData;
   const [pageNumber, setpageNumber] = useState(1);
   // var maxPage = Math.ceil(usersData.length / 5);
    var maxPage = 5
@@ -42,33 +25,50 @@ useEffect(() => {
 return (
     <div className="sessions flex-grow-1">
       <div className="bg-main-content py-5 pt-4 px-3 ">
-        <h2 className="text-main mb-5">Competition Session Rounds</h2>
+        <h2 className="text-main mb-5">Session #1</h2>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <div className="status d-flex">
             <Card
-               iconType ="fa-solid"
+            iconType ="fa-solid"
               iconName="fa-chart-simple"
+
               heading="SASMO 2022"
               subHeading="Competition"
               color="#706fa7"
             ></Card>
             <Card
-               iconType ="fa-solid"
-              iconName="fa-user"
-              heading="300"
-              subHeading="Participants"
+             iconType ="fa-regular"
+              iconName="fa-clock"
+              heading="2"
+              subHeading="Round"
               color="#F3A867"
             ></Card>
             <Card
-               iconType ="fa-solid"
-              iconName="fa-calendar"
-              heading="14/06/2022-20/06/2022"
-              subHeading="Competition Dates"
+             iconType ="fa-solid"
+             iconName="fa-signal"
+           
+              heading="2"
+              subHeading="Level"
               color="#6FC9B6"
             ></Card>
+            
           </div>
+          <div className='options me-4'>
+                        <button className="btn  dropdown-toggle option-dropdown ms-2" type="button" data-bs-toggle="modal" data-bs-target="#viewOptionsModal" >
+                            View Options
+                        </button>
+                        <button className="btn dropdown-toggle ms-2 option-dropdown" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+                            Filter
+                        </button>
+                        <ViewOptionModal columns={{
+                            name: "Columns",
+                            content: ["Country", "Grade", "School", "Class", "Tuition Centre", "Competition/Assessment", "Partner", "Teachers","Created By","Last Modified By","Created By"]
+                        }} />``
+                        <FilterModal filterby={[{ name: "School/Tuition", content: ["School", "Tuition"] }, { name: "Country", content: ["Egypt", "China", "USA"] },{ name: "Grade", content: [1,2,3] },{ name: "Competition", content: ["Disabled", "Enabled"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
+                    </div>
         </div>
         <div className="d-flex justify-content-end mt-2 align-items-center">
+            
           <div className="border-b-main">
             <i className="fas fa-magnifying-glass text-main"></i>
             <input
@@ -84,6 +84,7 @@ return (
               <thead className="bg-main">
                 <tr>
                   <td></td>
+                  <td><input type="checkBox" /></td>
                   {columns.map((column) => {
                     return <td index={column}>{column}</td>;
                   })}
@@ -94,10 +95,13 @@ return (
                   return (
                     <tr index={row.id}>
                       <td>{row.id}</td>
-                      <td>{row.round}</td>
-                      <td>{row.levels}</td>
-                      <td>{row.configuration}</td>
-                      <td>{row.score}</td>
+                      <td><input type="checkBox" /></td>
+                      <td>{row.index}</td>
+                      <td>{row.name}</td>
+                      <td>{row.country}</td>
+                      <td>{row.school}</td>
+                      <td>{row.grade}</td>
+                      <td>{row.class}</td>
                     </tr>
                   );
                 })}
@@ -118,4 +122,4 @@ return (
   );
 };
 
-export default CompetitionSessions;
+export default IndvdualSession;

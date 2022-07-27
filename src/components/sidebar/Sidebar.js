@@ -197,6 +197,14 @@ const Sidebar = () => {
                                 } to={"/dashboard/manage-competitions/pending-partners-competition-date"}>
                                     Pending Partners <br />Competition Date
                                 </NavLink>
+                           
+                            </li>
+                            <li>
+                            <NavLink  style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
+                                } to={"/dashboard/manage-competitions/indvidual-sessions"}>
+                                  Indvidual Session
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
