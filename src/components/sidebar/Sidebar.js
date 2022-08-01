@@ -74,6 +74,13 @@ const Sidebar = () => {
                             <li>
                                 <NavLink style={({ isActive }) =>
                                     isActive ? activeStyle : undefined
+                                } to={"/dashboard/setup/tasks"}>
+                                    Tasks
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink style={({ isActive }) =>
+                                    isActive ? activeStyle : undefined
                                 } to={"/dashboard/setup/grade"}>
                                     Grade
                                 </NavLink>

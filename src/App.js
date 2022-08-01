@@ -27,6 +27,7 @@ import AddCompetition from './components/manage competitions/add competiton/AddC
 import CSVUpload from './components/Setup/CSV upload/CSVUpload';
 import PageNotFound from './components/PageNotFound';
 import IndvdualSession from './components/indvidual/indvidual';
+import Tasks from './components/Setup/Tasks';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
               <Route path='domainstags' element={<DomainsTags />} />
               <Route path='difficulty-groups' element={<DifficultyGroups />} />
               <Route path='CSV-upload' element={<CSVUpload />} />
+              <Route path='tasks' element={<Tasks/>} />
               <Route path="/dashboard/setup" element={<Navigate replace to="/dashboard/setup/awards" />} />
             </Route>
             <Route path='settings'>

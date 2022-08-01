@@ -5,7 +5,7 @@ import axios from '../../axios/baseInstanse'
 
 const DeleteModal = ({deleteData,id,fetchData}) => {
     const [loading, setLoading] = useState(false);
-    
+    console.log(`${deleteData.deletePoint}${id}`);
     const handleDelete =async ()=>{
         setLoading(true);
         axios.delete(`${deleteData.deletePoint}${id}`)

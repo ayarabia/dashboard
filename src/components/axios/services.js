@@ -1,7 +1,8 @@
 import instance from '../axios/baseInstanse'
 
   export const getUsersData =  () => {
-    return instance.get("/api/users");
+  return instance.get("/api/users");
+ 
 }
 export const getOrganisationsData =  () => {
   return instance.get("/api/organizations");
@@ -16,15 +17,21 @@ export const getTasks =  () => {
 const update = (id, data) => {
   return instance.put(`/api/organizations/${id}`, data);
 };
-const create = (data) => {
-  return instance.post(`https://route-egypt-api.herokuapp.com/signin`, data);
+const updateTask = (id, data) => {
+  return instance.put(`http://34.231.234.91/api/tasks/${id}`, data);
+};
+const createTask = (data) => {
+  return instance.post(`http://34.231.234.91/api/tasks`, data);
 };
 const Service = {
   getUsersData,
   getOrganisationsData,
   getSchoolsData,
   getTasks,
-  update
+  createTask,
+  updateTask,
+  update,
+
  
 };
 export default Service;
