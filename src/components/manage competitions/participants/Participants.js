@@ -8,7 +8,7 @@ import './paticipant.css'
 
 const Participants = () => {
     return (
-        <div className='schools overflow-hidden'>
+        <div className='schools participants overflow-hidden'>
             <div className='flex-grow-1 bg-main-content py-5 pt-4 px-3 overflow-hidden'>
                 <h2 className='text-main '>Participants</h2>
                 <div className='d-flex justify-content-between align-items-center mb-3'>
@@ -99,7 +99,7 @@ const Participants = () => {
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
-                                    <td>541841</td>
+                                    <td className='index'>541841</td>
                                     <td>adasd   </td>
                                     <td>1</td>
                                     <td>Lorem ipsum dolor sit.</td>
@@ -126,7 +126,7 @@ const Participants = () => {
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
-                                    <td>541841</td>
+                                    <td className='index'> 541841</td>
                                     <td>adasd   </td>
                                     <td>1</td>
                                     <td>Lorem ipsum dolor sit.</td>
@@ -153,7 +153,7 @@ const Participants = () => {
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
-                                    <td>541841</td>
+                                    <td className='index'>541841</td>
                                     <td>adasd   </td>
                                     <td>1</td>
                                     <td>Lorem ipsum dolor sit.</td>
@@ -180,7 +180,7 @@ const Participants = () => {
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
-                                    <td>541841</td>
+                                    <td className='index'>541841</td>
                                     <td>adasd   </td>
                                     <td>1</td>
                                     <td>Lorem ipsum dolor sit.</td>
@@ -207,7 +207,7 @@ const Participants = () => {
                                         </div>
                                     </td>
                                     <td>Lorem.</td>
-                                    <td>541841</td>
+                                    <td className='index'>541841</td>
                                     <td>adasd   </td>
                                     <td>1</td>
                                     <td>Lorem ipsum dolor sit.</td>

@@ -1,10 +1,10 @@
-.schools .status .pending-item {
+.schools .status .pending-item ,.schools .status .total-item {
     color: var(--main-color);
 }
 
-.schools .status .total-item {
+/* .schools .status .total-item {
     color: var(--sec-color-2);
-}
+} */
 
 .schools .status span {
     color: var(--main-color-3);
