@@ -2,7 +2,7 @@ import React ,{useState} from "react";
 import Card from "../card/card";
 import FilterModal from '../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../Modals/vire options modal/ViewOptionModal'
-import IndvdualSessionData from "../../core/data/Session#1";
+import IndvdualSessionData from "../../core/data/Session1";
 const IndvdualSession= () => {
   const { columns, rows } = IndvdualSessionData;
   const [pageNumber, setpageNumber] = useState(1);
