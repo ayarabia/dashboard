@@ -97,6 +97,7 @@ const Schools = () => {
                             <thead className='bg-main'>
                                 <tr>
                                     <td></td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td>School/Tuition</td>
                                     <td>Country</td>
                                     <td>Email</td>
@@ -118,6 +119,7 @@ const Schools = () => {
                                     schoolsData && schoolsData.map((item, idx) => (
                                         <tr key={idx}>
                                             <td>{item.id}</td>
+                                            <td><input type="checkbox" className='form-check-input' id = {item.id}></input></td>
                                             <td className='approved_icons'>{item.name}
                                                 <div className='school__icons'>
                                                     <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#updateSchoolModal" onClick={() => handleUpdate(item)}></i>

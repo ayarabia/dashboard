@@ -25,6 +25,7 @@ function UsersTable() {
         Service.getUsersData()
           .then((response) => {
             let data=response.data
+          console.log(data);
             data = data.map(item => {
               item.checked = false;
               return item;

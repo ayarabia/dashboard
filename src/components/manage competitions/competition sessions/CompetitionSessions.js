@@ -84,6 +84,7 @@ return (
               <thead className="bg-main">
                 <tr>
                   <td></td>
+                  <td><input type="checkbox" className='form-check-input'></input></td>
                   {columns.map((column) => {
                     return <td index={column}>{column}</td>;
                   })}
@@ -94,6 +95,7 @@ return (
                   return (
                     <tr index={row.id}>
                       <td>{row.id}</td>
+                      <td><input type="checkbox" className='form-check-input'></input></td>
                       <td>{row.round}</td>
                       <td>{row.levels}</td>
                       <td>{row.configuration}</td>

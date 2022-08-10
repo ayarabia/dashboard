@@ -51,6 +51,7 @@ const DomainsTags = () => {
                             <thead className='bg-main'>
                                 <tr>
                                     <td></td>
+                                    <td><input type="checkbox" className='form-check-input' ></input></td>
                                     <td>Domain</td>
                                     <td>Topic</td>
                                     <td>Tag</td>
@@ -63,6 +64,7 @@ const DomainsTags = () => {
                             <tbody>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='domains__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
@@ -80,6 +82,7 @@ const DomainsTags = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='domains__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
@@ -97,6 +100,8 @@ const DomainsTags = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='domains__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
@@ -114,6 +119,7 @@ const DomainsTags = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='domains__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
@@ -132,6 +138,7 @@ const DomainsTags = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className='approved_icons'>Lorem, ipsum.
                                         <div className='domains__icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>

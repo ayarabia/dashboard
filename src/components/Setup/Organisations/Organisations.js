@@ -154,6 +154,7 @@ const Organisations = () => {
                         <thead className='bg-main'>
                             <tr>
                                 <td></td>
+                                <td><input type="checkbox" className='form-check-input'></input></td>
                                 <td>Name</td>
                                 <td>Country</td>
                                 <td>Email</td>
@@ -172,6 +173,7 @@ const Organisations = () => {
                                 organisationsData && organisationsData.map((item, idx) => (
                                     <tr key={idx}>
                                         <td>{item.id}</td>
+                                        <td><input type="checkbox" className='form-check-input'></input></td>
                                         <td>{item.name}
                                             <div className='organization__icons'>
                                                 <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editOrgModal" onClick={() => handleUpdate(item)}></i>

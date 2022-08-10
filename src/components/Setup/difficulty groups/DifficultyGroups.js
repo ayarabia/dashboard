@@ -51,6 +51,7 @@ const DifficultyGroups = () => {
                             <thead className='bg-main'>
                                 <tr>
                                     <td></td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td>Name</td>
                                     <td>No. of Difficulty</td>
                                     <td>Created By</td>
@@ -61,6 +62,7 @@ const DifficultyGroups = () => {
                             <tbody>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
@@ -78,6 +80,7 @@ const DifficultyGroups = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
@@ -95,6 +98,7 @@ const DifficultyGroups = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
@@ -112,6 +116,7 @@ const DifficultyGroups = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>
@@ -129,6 +134,7 @@ const DifficultyGroups = () => {
                                 </tr>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editDiffModal"></i>

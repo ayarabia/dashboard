@@ -50,6 +50,7 @@ const Competitions = () => {
                             <thead className='bg-main'>
                                 <tr>
                                     <td></td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td>Competition Name</td>
                                     <td>Description</td>
                                     <td>Competition Start</td>
@@ -65,6 +66,7 @@ const Competitions = () => {
                             <tbody>
                                 <tr>
                                     <td>1</td>
+                                    <td><input type="checkbox" className='form-check-input'></input></td>
                                     <td className=''>Lorem, ipsum.
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
