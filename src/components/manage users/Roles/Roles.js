@@ -5,19 +5,32 @@ import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import axios from '../../axios/baseInstanse'
 import './roles.css'
+import Service from '../../axios/services'
 
 const Roles = () => {
     const [deleteId, setdeleteId] = useState(0);
     const [updateData, setupdateData] = useState({});
     const [rolesData, setrolesData] = useState([]);
 
-    const getRolesData = async () => {
-        let { data } = await axios.get("/api/roles");
-        setrolesData(data)
-    }
+    // const getRolesData = async () => {
+    //     let { data } = await axios.get("https://api.adstarks.com/public/api/roles");
+    //     setrolesData(data)
+    // }
+    const getRoles= () => {
+        Service.getRoles()
+          .then((response) => {
+            let data=response.data
+            setrolesData(data)
+             console.log(response.data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      };
 
     useEffect(() => {
-        getRolesData();
+
+        getRoles();
     }, [])
 
     const handleDelete = (id) => {
@@ -83,8 +96,8 @@ const Roles = () => {
                                         <td>{item.name}
                                             <div className='roles__icons'>
 
-                                                <i   onClick={() => handleDelete(item.id)} className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
-                                                <DeleteModal id={deleteId} deleteData={{ type: "a Role", content: item.name , deletePoint: `/api/roles/` }} fetchData={getRolesData}  />
+                                                <i   onClick={() => handleDelete(item.uuid)} className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+                                                <DeleteModal id={deleteId} deleteData={{ type: "a Role", content: item.name , deletePoint: "roles" }} fetchData={getRoles}  />
 
                                             </div>
                                         </td>

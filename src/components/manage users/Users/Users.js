@@ -7,8 +7,7 @@ import AddUserModal from '../../Modals/add user modal/AddUserModal'
 import UsersTable from '../../UsersTable'
 import Service from "../../axios/services";
 const Users = () => {
-
-  const [usersData, setusersData] = useState([]);
+const [usersData, setusersData] = useState([]);
   const [pageNumber, setpageNumber] = useState(1);
   var maxPage = Math.ceil(usersData.length / 5);
   // const getUsersData = async () => {
@@ -19,29 +18,27 @@ const Users = () => {
   //   })
   //   setusersData(data)
   // }
-
-  const getUsersData = () => {
+ const getUsersData = () => {
     Service.getUsersData()
       .then((response) => {
-        let data=response.data
+        console.log(response.data.data);
+        let data=response.data.data
         data = data.map(item => {
           item.checked = false;
           return item;
         })
         setusersData(data)
-        console.log(response.data);
+        // console.log(data);
       })
       .catch((e) => {
-        console.log(e);
+        // console.log(e);
       });
   };
   useEffect(() => {
     getUsersData();
 
   }, [])
-
-
-  const handleMassDelete = async () => {
+const handleMassDelete = async () => {
     let ids = usersData.filter(item => item.checked === true).map(item => item.id);
     ids.forEach(async (id) => {
       await axios.delete(`/api/users/${id}`);
@@ -63,11 +60,9 @@ const Users = () => {
     setpageNumber(page)
     await getUsersData();
   }
-
-  return (
+return (
     <div className='flex-grow-1 bg-main-content py-5 px-3 overflow-hidden'>
-
-      <h2 className='text-main'>Users</h2>
+     <h2 className='text-main'>Users</h2>
       <div className='options d-flex justify-content-end'>
         <button className="btn  dropdown-toggle option-dropdown ms-2" type="button" data-bs-toggle="modal" data-bs-target="#viewOptionsModal" >
           View Options
@@ -79,10 +74,8 @@ const Users = () => {
           name: "Columns",
           content: ["Address", "Phone Number", "No. of Partners", "Person-in-charge", "Billing Address", "Shipping Address", "Created By", "Last Modified By"]
         }} />
-
-        <FilterModal filterby={[{ name: "Role", content: ["Admin", "Teacher", "Country Partner"] }, { name: "Country", content: ["Egypt", "China", "USA"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
-
-      </div>
+<FilterModal filterby={[{ name: "Role", content: ["Admin", "Teacher", "Country Partner"] }, { name: "Country", content: ["Egypt", "China", "USA"] }, { name: "Status", content: ["Disabled", "Enabled"] }]} />
+</div>
       <div className='d-flex justify-content-between mt-2 align-items-center'>
         <div className='d-flex'>
           <button className='add-btn shadow-sm py-1 px-3' data-bs-toggle="modal" data-bs-target="#addUserModal"><i className='fas fa-plus'></i> Add New User</button>
@@ -96,8 +89,7 @@ const Users = () => {
           <input className='input-transparent px-5 ' type="text" placeholder='Search for Organisation' />
         </div>
       </div>
-
-      <UsersTable></UsersTable>
+     <UsersTable></UsersTable>
       <div className='options d-flex justify-content-end'>
               <button className='btn py-1 px-2 wrap' onClick={handlePrev}><i class="fa-solid fa-angle-left fa-xs"/></button>
               {Array.from(Array(maxPage).keys()).map((item, idx) => (
@@ -110,5 +102,4 @@ const Users = () => {
     </div>
   )
 }
-
 export default Users

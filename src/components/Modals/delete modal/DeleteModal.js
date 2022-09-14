@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import './deletemodal.css'
 import axios from '../../axios/baseInstanse'
+import Service from '../../axios/services';
 
 
 const DeleteModal = ({deleteData,id,fetchData}) => {
     const [loading, setLoading] = useState(false);
-    console.log(`${deleteData.deletePoint}${id}`);
     const handleDelete =async ()=>{
         setLoading(true);
-        axios.delete(`${deleteData.deletePoint}${id}`)
+        // axios.delete(`${deleteData.deletePoint}${id}`)
+        Service.deletData(deleteData.deletePoint,id)
             .then(() => {
-                
-                    setLoading(false);
+                setLoading(false);
                     handleCloseModal();
                     fetchData();
                 

@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState ,useEffect} from 'react'
 import DeleteModal from '../../Modals/delete modal/DeleteModal'
 import EditModal from '../../Modals/edit modal/EditModal'
 import FilterModal from '../../Modals/filter modal/FilterModal'
 import ViewOptionModal from '../../Modals/vire options modal/ViewOptionModal'
 import { Link} from 'react-router-dom';
 import './competiton.css'
+import Service from '../../axios/services'
 
 const Competitions = () => {
+    const [competitions, srtCompetitions ] = useState([]);
+    const getcompetitionsData= () => {
+       Service.getCompetitionsData()
+          .then((response) => {
+            let data =response.data.data
+            srtCompetitions(data)
+            console.log(data);
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+      };
+      useEffect(() => {
+        getcompetitionsData();
+    }, [])
     return (
         <div className=' overflow-hidden w-100 '>
             <div className='flex-grow-1 bg-main-content py-5 px-3 overflow-hidden'>
@@ -64,10 +80,12 @@ const Competitions = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
+                                {competitions&&competitions.map((item)=>{
+                                  return (
+                                    <tr>
+                                    <td>{item.id}</td>
                                     <td><input type="checkbox" className='form-check-input'></input></td>
-                                    <td className=''>Lorem, ipsum.
+                                    <td className=''>{item.name}
                                         <div className='competiton_icons'>
                                             <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#editModal"></i>
                                             <EditModal editData={{ type: "domain", content: ["Domain Name"] }} />
@@ -81,16 +99,18 @@ const Competitions = () => {
                                             <i className='fas  fa-cloud-arrow-up me-2'></i>
                                         </div>
                                     </td>
-                                    <td>Lorem.</td>
-                                    <td className=''>020/05/5 13:00</td>
-                                    <td className=''>2020/05/5 13:00</td>
+                                    <td>{item.instructions}</td>
+                                    <td >{item.global_competition_start_date}</td>
+                                    <td >{item.global_competition_end_date}</td>
                                     <td>3</td>
-                                    <td>local</td>
+                                    <td>{item.competition_format}</td>
                                     <td>1,2,3</td>
                                     <td><span>Easy</span><span>Math</span><span>Primary</span></td>
-                                    <td>3</td>
-                                    <td className=''><span className='status-btn active-btn'>Active</span></td>
+                                    <td>{item.round_awards.length}</td>
+                                    <td ><span className='status-btn active-btn'>{item.status}</span></td>
                                 </tr>
+                                  )  
+                                })}
 
                             </tbody>
                         </table>

@@ -6,14 +6,32 @@ import Service from "../../axios/services";
 import Card from "../../card/card";
 import TableComponent from '../../Table'
 import AddTaskModal from '../../Modals/AddTaskModal'
+import UpdateTaskModal from '../../Modals/updateTaskModal';
+import DeleteModal from '../../Modals/delete modal/DeleteModal'
 function Tasks() {
-    const [tasks, setTasks] = useState([]);
+
+const [updateTask,setUpdateTask]=useState({})
+const [updatedId, setUpdatedId] = useState(0);
+
+const handleUpdate = (row) => {
+  setUpdateTask({ identifier: row.identifier, title:row.title, description: row.description });
+  setUpdatedId(row.uuid)
+
+}
+const handleDelete = (id) => {
+  setUpdatedId(id)
+  
+}
+const columns=["Task Identifier","Task Title","Discreption","No. of Language(s)","Domain"]
+   
+const [tasks, setTasks] = useState([]);
     const [pageNumber, setpageNumber] = useState(1);
     var maxPage = Math.ceil(tasks.length / 5);
  const getTasks = () => {
       Service.getTasks()
         .then((response) => {
-          let data=response.data
+          let data=response.data.data
+          console.log(data);
           data = data.map(item => {
             item.checked = false;
             return item;
@@ -109,8 +127,46 @@ function Tasks() {
             <input className='input-transparent px-5 ' type="text" placeholder='Search for Organisation' />
           </div>
         </div>
-  
-        <TableComponent getTasks={getTasks} rows={tasks} columns={["Task Identifier","Task Title","Discreption","No. of Language(s)","Domain"]}></TableComponent>
+        <div className="mt-3 position-relative">
+    <div className="overflow-auto">
+      <table className="w-100 ">
+        <thead className="bg-main">
+          <tr>
+            <td></td>
+            <td><input type="checkBox" className='form-check-input' /></td>
+ {columns.map((column)=>{
+    return(<td>{column}</td>)
+})}
+          </tr>
+        </thead>
+        <tbody>
+          {tasks.map((row) => {
+            return (
+              <tr index={row.id}>
+                <td>{row.id}</td>
+                <td><input type="checkbox" className='form-check-input'   id = {row.id}></input></td>
+                <td>{row.identifier}
+                
+                <div className='users__icons'>
+                        <i className="fa-solid fa-pen-to-square me-2" data-bs-toggle="modal" data-bs-target="#updateTaskModal" onClick={() => handleUpdate(row)}></i>
+                       <UpdateTaskModal     deletedItem={updatedId} updateTask={updateTask} getTasks={getTasks}/>
+                        <i className="fa-solid fa-trash me-2" data-bs-toggle="modal" data-bs-target="#deleteModal"  onClick={()=> handleDelete(row.uuid)}></i>
+                        <DeleteModal id={updatedId} deleteData={{ type: "a task", content:row.title, deletePoint: `tasks` }} fetchData={getTasks} />
+                        </div>
+                </td>
+                <td>{row. title}</td>
+                <td>{row.description}</td>
+                <td>1/1</td>
+                <td>Domain</td>
+             
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </div>
+      
         <div className='options d-flex justify-content-end'>
                 <button className='btn py-1 px-2 wrap' onClick={handlePrev}><i class="fa-solid fa-angle-left fa-xs"/></button>
                 {Array.from(Array(maxPage).keys()).map((item, idx) => (

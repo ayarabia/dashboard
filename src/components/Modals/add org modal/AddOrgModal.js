@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import * as yup from 'yup';
 import axios from '../../axios/baseInstanse'
+import Service from '../../axios/services';
 
 const AddOrgModal = ({ getOrganisationsData }) => {
 
@@ -38,7 +39,8 @@ const AddOrgModal = ({ getOrganisationsData }) => {
         if(isValid) {
             setLoading(true)
             seterrorlist(null);
-            axios.post('http://34.231.234.91/api/organizations', addDataState)
+            // axios.post('http://34.231.234.91/api/organizations', addDataState)
+            Service.AddOrganization(addDataState)
             .then(({ data }) => {
                 if (data) {
                     setLoading(false);

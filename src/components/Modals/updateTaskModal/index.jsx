@@ -1,36 +1,47 @@
 import React, { useState } from "react";
 import Service from "../../axios/services";
+import * as yup from 'yup';
 function UpdateTaskModal({getTasks,deletedItem,updateTask}) {
-
-  const [loading, setLoading] = useState(false);
-  const [taskInfomation, setTaskInfomation] = useState(updateTask);
+const [loading, setLoading] = useState(false);
+ const [ identifier,setIdentifier] = useState(false);
+  const [addDataState, setAddDataState] = useState({});
   function handleCloseModal() {
     document.getElementById("updateTaskModal").classList.remove("show", "d-block");
     document.querySelectorAll(".modal-backdrop").forEach(el => el.classList.remove("modal-backdrop"));
     document.querySelector("body").classList.remove("modal-open");
     document.querySelector("body").style = "";
 }
+const [errorlist, seterrorlist] = useState(false);
+const schema = yup.object().shape({
+   title: yup.string().required(),
+  identifier: yup.string().required(),
+ })
   function handlOnChange(e) {
-    let myData = { ...taskInfomation };
-     myData[e.target.name] = e.target.value;
-setTaskInfomation(myData);
+     let myData = { ...updateTask };
+         myData[e.target.name] = e.target.value;
+         delete myData.approved_at;
+        delete myData["created_by"];
+        setAddDataState(myData);
+      seterrorlist(null)
+
 }
 
 const formSubmit = async (e) => {
   e.preventDefault();
-
-      Service.updateTask(deletedItem,taskInfomation)
+  setLoading(true);
+  const isValid = await schema.validate(addDataState).catch((error) => seterrorlist(error.errors))
+ setLoading(false);
+ if(isValid) {
+Service.updateTask(deletedItem,addDataState)
       .then(() => {
           setLoading(false);
           handleCloseModal();
           getTasks();
-          // console.log( getTasksData());
-      })
+       })
       .catch((error) => {
-
-          setLoading(false);
+     setLoading(false);
       });
-
+}
   
 }
   return (
@@ -55,7 +66,7 @@ const formSubmit = async (e) => {
           <div className="modal-body rounded-3 shadow-sm mb-3  py-4 px-5">
             <form action="">
              
-              {/* {errorlist && <p className='text-danger w-100 text-center'>{errorlist[0]}</p>} */}
+              {errorlist && <p className='text-danger w-100 text-center'>{errorlist[0]}</p>}
               <div className="row mt-4">
                 <div className="col-md-6 col-sm-12">
                   <label htmlFor="taskTitle" className="form-label">
@@ -76,18 +87,19 @@ const formSubmit = async (e) => {
               <div className="row mt-4">
                 <div className="col-md-6 col-sm-12">
                   <label htmlFor="taskIdentifier" className="form-label">
-                    Task Identifier
+                    Task Identifier *
                   </label>
                 </div>
                 <div className="col-md-6 col-sm-12">
                   <input
                     type="text"
-                    className="form-control text-center"
+                   className="form-control text-center"
                     id="taskIdentifier"
                     placeholder="Task Identifier"
                     name="identifier"
                     onChange={handlOnChange}
                   />
+                 {identifier&& <p>Task Identifier is Required</p>}
                 </div>
               </div>
               <div className="row mt-4">
@@ -117,7 +129,7 @@ const formSubmit = async (e) => {
               onClick={formSubmit}
               className="btn btn-confirm px-4 mt-3 "
             >
-              <i className="fa-solid fa-floppy-disk me-3"></i>{" "}
+              <i className="fa-solid fa-floppy-disk me-3"></i>
               <span>
                 {loading ? <i className="fas fa-spinner  fa-spin"></i> : "Save"}
               </span>

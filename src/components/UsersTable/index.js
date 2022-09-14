@@ -24,7 +24,7 @@ function UsersTable() {
       const getUsersData = () => {
         Service.getUsersData()
           .then((response) => {
-            let data=response.data
+            let data=response.data.data
           console.log(data);
             data = data.map(item => {
               item.checked = false;
@@ -114,8 +114,8 @@ function UsersTable() {
             </thead>
             <tbody>
               {
-                usersData && usersData.slice((pageNumber-1)*5,5*(pageNumber-1) + 5).map((item, idx) => (
-                  <tr key={idx}>
+                usersData && usersData.slice((pageNumber-1)*5,5*(pageNumber-1) + 5).map((item, index) => (
+                  <tr key={item.id}>
                     <td>{item.id}</td>
                     <td><input type="checkbox" className='form-check-input' checked={item.checked} onChange = {handleItemCheck} id = {item.id}></input></td>
                     <td>{item.name}
@@ -135,8 +135,8 @@ function UsersTable() {
                     <td>{getCoutry(item.country_id)}</td>
                     <td>{item.permission_by_role}</td>
                     <td>{item.email}</td>
-                    <td>{item.created_by} at {item.created_at}</td>
-                    <td>{item.updated_by} at {item.updated_at}</td>
+                    <td>{item.created_by}</td>
+                    <td>{item.updated_by} </td>
                     <td>{item.login}</td>
                     <td>{item.status}</td>
                     {/* <td><span className="status-btn disabled">Disabled</span></td> */}

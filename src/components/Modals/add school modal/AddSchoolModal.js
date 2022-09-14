@@ -1,6 +1,7 @@
 import React, {  useState } from 'react'
 import axios from 'axios';
 import './addmodal.css'
+import Service from '../../axios/services';
 
 
 const AddSchoolModal = ({getSchoolsData}) => {
@@ -9,6 +10,7 @@ const AddSchoolModal = ({getSchoolsData}) => {
 
     function getData(e) {
         let myData = { ...addDataState };
+        console.log(e.target.name);
         myData[e.target.name] = e.target.value;
         setAddDataState(myData);
         
@@ -16,11 +18,11 @@ const AddSchoolModal = ({getSchoolsData}) => {
     const formSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
-        axios.post('http://34.231.234.91/api/schools', addDataState)
+        // axios.post('https://api.adstarks.com/public/api/schools', addDataState)
+        Service.AddSchool(addDataState)
             .then(({data}) => {
                 if (data) {
-                    
-                    setLoading(false);
+                     setLoading(false);
                     handleCloseModal();
                     getSchoolsData();
                 }
