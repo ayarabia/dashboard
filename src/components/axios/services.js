@@ -26,6 +26,9 @@ const updateDomain = (id, data) => {
 const updateParticipants = (id, data) => {
   return instance.put(`participants/${id}`, data);
 };
+const changePassword = ( data) => {
+  return instance.put("profile", data);
+};
 const updateTask = (id, data) => {
   return instance.put(`tasks/updateTask/${id}`, data);
 };
@@ -80,6 +83,7 @@ const Service = {
   updateDomain,
   updateParticipants,
   AddSchool,
-  AddOrganization
+  AddOrganization,
+  changePassword
 };
 export default Service;

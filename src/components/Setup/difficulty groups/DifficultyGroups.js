@@ -57,6 +57,7 @@ const DifficultyGroups = () => {
             }
         }
     });
+    console.log(item.uuid);
     setdeleteId(item.uuid);
   };
 

@@ -31,7 +31,7 @@ const DomainsTags = () => {
 
 const handleUpdate = (item) => {
   setupdateData({ name: item.name});
-    setdeleteId(item.uuid )
+    setdeleteId(item.domain.uuid )
 }
   return (
     <div className="schools overflow-hidden w-100 domain">
@@ -128,7 +128,7 @@ const handleUpdate = (item) => {
                           ></input>
                         </td>
                         <td className="approved_icons">
-                        {item.name}
+                        {item.domain.name}
                           <div className="domains__icons">
                             <i
                               className="fa-solid fa-pen-to-square me-2"
